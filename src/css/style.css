@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -52,6 +54,48 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 30px 60px;
+}
+
+.showOption {
+    position: relative;
+}
+
+
+.sidbar {
+    opacity: 0;
+    height: 0px;
+    width: 120px;
+    background-color: rgb(227, 220, 213);
+    position: absolute;
+    left: -50px;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+.visible {
+    height: 257px;
+    opacity: 1;
+}
+
+.sidbar__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidbar__content div {
+    padding: 19.6px 0px;
+    text-align: center;
+    color: black;
+
+}
+
+.sidbar__content div:hover{
+    background-color: rgb(35, 35, 35);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer;
+    color: white;
 }
 
 header .logo,
